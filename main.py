@@ -1,13 +1,19 @@
 import pandas as pd 
 
 from utils.simulacionComercio import simulacion_datos_comercio
+from utils.simulacionUsuarios import simulacion_datos_usuario
 
 from notebook.limpiezaComercio import limpiar_comercio
+from notebook.limpiezaUsuario import limpiar_usuarios
 
-datos=simulacion_datos_comercio(200)
+simulacion_comercio=simulacion_datos_comercio(10)
+simulacion_usuario=simulacion_datos_usuario(10)
 
-simulaciones_ordenadas=pd.DataFrame(datos)
+simulacion_ordenada_comercio=pd.DataFrame(simulacion_comercio)
+simulacion_ordenada_usuario=pd.DataFrame(simulacion_usuario)
 
-simulaciones_limpias=limpiar_comercio(simulaciones_ordenadas)
+simulaciones_limpias_comercio=limpiar_comercio(simulacion_ordenada_comercio)
+simulaciones_limpias_usuario=limpiar_usuarios(simulacion_ordenada_usuario)
 
-print(simulaciones_limpias)
+print(simulacion_ordenada_comercio)
+print(simulacion_ordenada_usuario)
