@@ -1,12 +1,13 @@
-from utils.simulacionUsuarios import simulacion_datos_usuario
-import pandas as pd
+import pandas as pd 
 
-#imprimir datos sin pandas
-#resultado = (simulacion_datos_usuario(500))
-#print (resultado)
+from utils.simulacionComercio import simulacion_datos_comercio
 
-#imprimir datos con pandas
-datos = (simulacion_datos_usuario(500))
-tabla_ordenada = pd.DataFrame(datos)
+from notebook.limpiezaComercio import limpiar_comercio
 
-print(tabla_ordenada)
+datos=simulacion_datos_comercio(200)
+
+simulaciones_ordenadas=pd.DataFrame(datos)
+
+simulaciones_limpias=limpiar_comercio(simulaciones_ordenadas)
+
+print(simulaciones_limpias)
