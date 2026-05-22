@@ -14,7 +14,7 @@ from datetime import datetime, timedelta
 
 def simulacion_datos_comercio(numeroDatos):
 
-    # atributos base
+    # atributos basea
     nits        = ["900123456", "901234567", "902345678", "903456789", "904567890"]
     nombres     = ["Tienda ABC", "Supermercado XYZ", "Tech Store", "Farmacia Vida", "Ropa Express"]
     actividades = ["venta", "servicios", "tecnologia", "salud", "retail"]
